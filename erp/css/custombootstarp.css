@@ -1,0 +1,38 @@
+.nav-header {
+	font-size: 14px;
+}
+.login {
+	padding: 60px 0px 40px 0px; 
+	display: table; 
+	width: 100%;
+}
+.loginlogo {
+	width: 48%; 
+	text-align: right; 
+	float: left; 
+	font-size: 60px; 
+	padding-top: 75px;
+}
+.loginform {
+	width: 48%; 
+	text-align: left; 
+	float: right; 
+	border-left: #CCC solid 1px;
+	padding-left: 20px;
+}
+.searchrow {
+	padding-bottom: 10px;
+}
+.search-form {
+	padding-top: 20px;
+}
+.row {
+	margin-left: 0px;
+}
+h1 {
+	font-size: 26px;
+}
+.changepassword{
+	float: none;
+	margin: 0px auto 0px auto;
+}

@@ -4,20 +4,8 @@
  * - $this: the BootCrudCode object
  */
 ?>
-<?php
-echo "<?php\n";
-$label=$this->pluralize($this->class2name($this->modelClass));
-echo "\$this->breadcrumbs=array(
-	'$label'=>array('index'),
-	'Manage',
-);\n";
-?>
-
-$this->menu=array(
-	array('label'=>'List <?php echo $this->modelClass; ?>','url'=>array('index')),
-	array('label'=>'Create <?php echo $this->modelClass; ?>','url'=>array('create')),
-);
-
+<?php echo "<?php echo \$this->renderPartial('_menu'); ?>\n"; ?>
+<?php echo "<?php\n"; ?>
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -33,13 +21,19 @@ $('.search-form form').submit(function(){
 ?>
 
 <h1>Manage <?php echo $this->pluralize($this->class2name($this->modelClass)); ?></h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo "<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>"; ?>
+<hr>
+<?php 
+echo "<?php\n"; 
+echo "\$this->widget('bootstrap.widgets.TbButton', array(
+    'label' => '高级搜索',
+    'icon' => 'search',
+    'type' => 'normal',
+    'size' => 'normal',
+    'url' => array('#'),
+    'htmlOptions'=>array('class'=>'search-button','style'=>'margin-right:10px'),
+));
+\n"; ?>
+?>
 
 <div class="search-form" style="display:none">
 <?php echo "<?php \$this->renderPartial('_search',array(
@@ -65,6 +59,7 @@ if($count>=7)
 ?>
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template'=>'{view}{update}{delete}'
 		),
 	),
 )); ?>

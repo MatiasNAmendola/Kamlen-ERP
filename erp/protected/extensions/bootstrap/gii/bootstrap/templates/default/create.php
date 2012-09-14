@@ -4,21 +4,8 @@
  * - $this: the BootCrudCode object
  */
 ?>
-<?php
-echo "<?php\n";
-$label=$this->pluralize($this->class2name($this->modelClass));
-echo "\$this->breadcrumbs=array(
-	'$label'=>array('index'),
-	'Create',
-);\n";
-?>
-
-$this->menu=array(
-	array('label'=>'List <?php echo $this->modelClass; ?>','url'=>array('index')),
-	array('label'=>'Manage <?php echo $this->modelClass; ?>','url'=>array('admin')),
-);
-?>
+<?php echo "<?php echo \$this->renderPartial('_menu'); ?>\n"; ?>
 
 <h1>Create <?php echo $this->modelClass; ?></h1>
-
+<hr>
 <?php echo "<?php echo \$this->renderPartial('_form', array('model'=>\$model)); ?>"; ?>

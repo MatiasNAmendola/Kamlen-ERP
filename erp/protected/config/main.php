@@ -7,7 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Kamlen ERP',
+	'name'=>'ERP',
+	'language'=>'zh_cn',
 
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap'),
@@ -32,9 +33,9 @@ return array(
        			 ),
 		),
 		'rights'=>array(
-			'install'=>true,
+			'enableBizRule' => true,
+			//'install'=>true,
 		),
-		'user',
 	),
 
 	// application components
@@ -44,14 +45,16 @@ return array(
 		),
 		'user'=>array(
 			'class'=>'RWebUser',
+			'loginUrl'=>'/user/login'
 		),
 		'authManager'=>array(
-			'class'=>'RDbAuthManager',
+		'class'=>'RDbAuthManager',
 		),
 
 		// uncomment the following to enable URLs in path-format
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName' => false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
@@ -76,7 +79,7 @@ return array(
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
-			'errorAction'=>'error',
+			'errorAction'=>'site/error',
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',

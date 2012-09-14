@@ -1,6 +1,6 @@
 <?php
 
-class User extends CActiveRecord
+class ChangePassword extends CActiveRecord
 {
 	/**
 	 * The followings are the available columns in table 'tbl_user':
@@ -12,6 +12,7 @@ class User extends CActiveRecord
 	 * @var string $profile
 	 */
 	public $repassword;
+	public $orpassword;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return CActiveRecord the static model class
@@ -37,14 +38,20 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, repassword, email', 'required'),
-			array('username, salt, email', 'length', 'max'=>128),
-			array('password, repassword', 'length', 'min'=>5, 'max'=>32),
+			array('password, repassword, orpassword', 'required'),
+			array('password, repassword, orpassword', 'length', 'min'=>5, 'max'=>32),
 			array('repassword', 'compare', 'compareAttribute'=>'password'),
-			array('profile', 'safe'),
+			array('orpassword','validateOrpassword'),
+			array('profile,salt', 'safe'),
 		);
 	}
 
+	public function validateOrpassword($attribute)
+	{
+			$user=User::model()->find('LOWER(username)=?',array(strtolower(Yii::app()->user->name)));
+			if(!$user->validatePassword($this->orpassword))
+				$this->addError($attribute, '原始密码不正确!');
+	}
 	/**
 	 * @return array relational rules.
 	 */
@@ -67,6 +74,7 @@ class User extends CActiveRecord
 			'username' => '账号',
 			'password' => '密码',
 			'repassword' => '重复密码',
+			'orpassword' => '原始密码',
 			'salt' => 'Salt',
 			'email' => '邮箱',
 			'profile' => '简介',

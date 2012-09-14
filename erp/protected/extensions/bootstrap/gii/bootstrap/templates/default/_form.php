@@ -8,9 +8,7 @@
 	'id'=>'".$this->class2id($this->modelClass)."-form',
 	'enableAjaxValidation'=>false,
 )); ?>\n"; ?>
-
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
-
+	<?php echo "<?php \$this->widget('bootstrap.widgets.TbAlert'); ?>\n"; ?>
 	<?php echo "<?php echo \$form->errorSummary(\$model); ?>\n"; ?>
 
 <?php
@@ -24,11 +22,11 @@ foreach($this->tableSchema->columns as $column)
 <?php
 }
 ?>
-	<div class="form-actions">
+	<div>
 		<?php echo "<?php \$this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
 			'type'=>'primary',
-			'label'=>\$model->isNewRecord ? 'Create' : 'Save',
+			'label'=>\$model->isNewRecord ? '确定' : '保存',
 		)); ?>\n"; ?>
 	</div>
 

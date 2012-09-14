@@ -7,6 +7,7 @@
 <?php echo "<?php \$form=\$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl(\$this->route),
 	'method'=>'get',
+	'type'=>'inline',
 )); ?>\n"; ?>
 
 <?php foreach($this->tableSchema->columns as $column): ?>
@@ -15,14 +16,15 @@
 	if(strpos($field,'password')!==false)
 		continue;
 ?>
-	<?php echo "<?php echo ".$this->generateActiveRow($this->modelClass,$column)."; ?>\n"; ?>
-
+	<div class='searchrow'>
+		<?php echo "<?php echo ".$this->generateActiveRow($this->modelClass,$column)."; ?>\n"; ?>
+	</div>
 <?php endforeach; ?>
-	<div class="form-actions">
+	<div>
 		<?php echo "<?php \$this->widget('bootstrap.widgets.TbButton', array(
-		    'buttonType'=>'submit'
+		    'buttonType'=>'submit',
 			'type'=>'primary',
-			'label'=>'Search',
+			'label'=>'搜索',
 		)); ?>\n"; ?>
 	</div>
 
