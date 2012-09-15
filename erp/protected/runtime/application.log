@@ -532,3 +532,51 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/09/15 06:12:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/erp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/15 06:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/erp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/15 06:13:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/erp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/15 06:13:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/erp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/15 06:13:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/erp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/15 06:13:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/erp.kamlen.com/erp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
