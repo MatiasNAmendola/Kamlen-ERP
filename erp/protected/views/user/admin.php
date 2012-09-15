@@ -25,7 +25,14 @@ $this->widget('bootstrap.widgets.TbButton', array(
     'url' => array('#'),
     'htmlOptions'=>array('class'=>'search-button','style'=>'margin-right:10px'),
 ));
-
+$this->widget('bootstrap.widgets.TbButton', array(
+    'label' => '添加用户',
+    'icon' => 'plus',
+    'type' => 'normal',
+    'size' => 'normal',
+    'url' => array('create'),
+    'htmlOptions'=>array('style'=>'margin-right:10px'),
+));
 ?>
 
 <div class="search-form" style="display:none">

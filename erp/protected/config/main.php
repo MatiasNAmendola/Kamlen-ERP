@@ -103,5 +103,11 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+		'Product_Status'=>array(
+				'-1'=>'已停产',
+				'0'=>'正常',
+				'1'=>'库存预警',
+				'2'=>'库存过盛',
+			),
 	),
 );

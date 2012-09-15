@@ -59,7 +59,7 @@ if($count>=7)
 ?>
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
-			'template'=>'{view}{update}{delete}'
+			'template'=>'{view} {update} {delete}'
 		),
 	),
 )); ?>

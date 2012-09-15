@@ -40,7 +40,12 @@
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
                 array('label'=>'首页', 'url'=>'/'),
-                //array('label'=>'用户管理', 'icon'=>'user', 'url'=>'/user','visible'=>Yii::app()->getUser()->checkAccess('/user')),
+                array('label'=>'分类', 'url'=>'productsCategory','visible'=>Yii::app()->getUser()->checkAccess('/productsCategory')),
+                array('label'=>'产品', 'url'=>'/products','visible'=>Yii::app()->getUser()->checkAccess('/products')),
+                array('label'=>'渠道', 'url'=>'/channel','visible'=>Yii::app()->getUser()->checkAccess('/channel')),
+                array('label'=>'订单', 'url'=>'/order','visible'=>Yii::app()->getUser()->checkAccess('/order')),
+                array('label'=>'快递', 'url'=>'/express','visible'=>Yii::app()->getUser()->checkAccess('/express')),
+                array('label'=>'统计', 'url'=>'#','visible'=>Yii::app()->getUser()->checkAccess('/order')),
             ),
         ),
         array(
